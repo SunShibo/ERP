@@ -100,6 +100,11 @@
             <artifactId>pagehelper</artifactId>
             <version>5.1.11</version>
         </dependency>
+        <dependency>
+            <groupId>com.github.jsqlparser</groupId>
+            <artifactId>jsqlparser</artifactId>
+            <version>3.1</version>
+        </dependency>
         <!--jxl-->
         <dependency>
             <groupId>net.sourceforge.jexcelapi</groupId>

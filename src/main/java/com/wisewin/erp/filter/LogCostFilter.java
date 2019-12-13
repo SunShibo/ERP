@@ -85,6 +85,8 @@ public class LogCostFilter implements Filter {
         }
         return false;
     }
+
+
     @Override
     public void destroy() {
 

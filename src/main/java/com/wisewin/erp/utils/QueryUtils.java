@@ -23,15 +23,15 @@ public class QueryUtils {
     }
 
     public static <T> T list2One(List<T> list, String label) {
-        Assert.notNull(label);
+        Assert.notNull(label,"是空的");
         Assert.notEmpty(list, label + "对应的记录不存在");
         Assert.isTrue(list.size() == 1, label + "对应的记录不止一个");
         return list.get(0);
     }
 
     public static <T> T list2One(List<T> list, String label, T defaultValue) {
-        Assert.notNull(list);
-        Assert.notNull(label);
+        Assert.notNull(list,"是空的");
+        Assert.notNull(label,"是空的");
         if (list.isEmpty())
             return defaultValue;
         else {
