@@ -98,13 +98,9 @@
         <dependency>
             <groupId>com.github.pagehelper</groupId>
             <artifactId>pagehelper-spring-boot-starter</artifactId>
-            <version>1.2.5</version>
+            <version>1.2.12</version>
         </dependency>
-        <dependency>
-            <groupId>com.github.jsqlparser</groupId>
-            <artifactId>jsqlparser</artifactId>
-            <version>3.1</version>
-        </dependency>
+
         <!--jxl-->
         <dependency>
             <groupId>net.sourceforge.jexcelapi</groupId>

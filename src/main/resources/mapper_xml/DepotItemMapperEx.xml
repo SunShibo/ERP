@@ -1,65 +1,70 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper  namespace="com.wisewin.erp.datasource.mappers.DepotItemMapperEx">
+<mapper namespace="com.wisewin.erp.datasource.mappers.DepotItemMapperEx">
 
-    <resultMap id="DetailByTypeAndMIdResultMap" type="com.wisewin.erp.datasource.entities.DepotItemVo4DetailByTypeAndMId">
-        <result column="Number" jdbcType="VARCHAR" property="number" />
-        <result column="newType" jdbcType="VARCHAR" property="newtype" />
-        <result column="b_num" jdbcType="BIGINT" property="bnum" />
-        <result column="oTime" jdbcType="TIMESTAMP" property="otime" />
+    <resultMap id="DetailByTypeAndMIdResultMap"
+               type="com.wisewin.erp.datasource.entities.DepotItemVo4DetailByTypeAndMId">
+        <result column="Number" jdbcType="VARCHAR" property="number"/>
+        <result column="newType" jdbcType="VARCHAR" property="newtype"/>
+        <result column="b_num" jdbcType="BIGINT" property="bnum"/>
+        <result column="oTime" jdbcType="TIMESTAMP" property="otime"/>
     </resultMap>
 
-    <resultMap extends="com.wisewin.erp.datasource.mappers.DepotItemMapper.BaseResultMap" id="ResultAndMaterialMap" type="com.wisewin.erp.datasource.entities.DepotItemVo4Material">
-        <result column="mName" jdbcType="VARCHAR" property="mname" />
-        <result column="mModel" jdbcType="VARCHAR" property="mmodel" />
+    <resultMap extends="com.wisewin.erp.datasource.mappers.DepotItemMapper.BaseResultMap" id="ResultAndMaterialMap"
+               type="com.wisewin.erp.datasource.entities.DepotItemVo4Material">
+        <result column="mName" jdbcType="VARCHAR" property="mname"/>
+        <result column="mModel" jdbcType="VARCHAR" property="mmodel"/>
     </resultMap>
 
-    <resultMap extends="com.wisewin.erp.datasource.mappers.DepotItemMapper.BaseResultMap" id="ResultWithInfoExMap" type="com.wisewin.erp.datasource.entities.DepotItemVo4WithInfoEx">
-        <result column="MName" jdbcType="VARCHAR" property="MName" />
-        <result column="MModel" jdbcType="VARCHAR" property="MModel" />
-        <result column="MaterialUnit" jdbcType="VARCHAR" property="MaterialUnit" />
-        <result column="MColor" jdbcType="VARCHAR" property="MColor" />
-        <result column="MStandard" jdbcType="VARCHAR" property="MStandard" />
-        <result column="MMfrs" jdbcType="VARCHAR" property="MMfrs" />
-        <result column="MOtherField1" jdbcType="VARCHAR" property="MOtherField1" />
-        <result column="MOtherField2" jdbcType="VARCHAR" property="MOtherField2" />
-        <result column="MOtherField3" jdbcType="VARCHAR" property="MOtherField3" />
-        <result column="DepotName" jdbcType="VARCHAR" property="DepotName" />
-        <result column="AnotherDepotName" jdbcType="VARCHAR" property="AnotherDepotName" />
-        <result column="UnitId" jdbcType="BIGINT" property="UnitId" />
-        <result column="UName" jdbcType="VARCHAR" property="UName" />
+    <resultMap extends="com.wisewin.erp.datasource.mappers.DepotItemMapper.BaseResultMap" id="ResultWithInfoExMap"
+               type="com.wisewin.erp.datasource.entities.DepotItemVo4WithInfoEx">
+        <result column="MName" jdbcType="VARCHAR" property="MName"/>
+        <result column="MModel" jdbcType="VARCHAR" property="MModel"/>
+        <result column="MaterialUnit" jdbcType="VARCHAR" property="MaterialUnit"/>
+        <result column="MColor" jdbcType="VARCHAR" property="MColor"/>
+        <result column="MStandard" jdbcType="VARCHAR" property="MStandard"/>
+        <result column="MMfrs" jdbcType="VARCHAR" property="MMfrs"/>
+        <result column="MOtherField1" jdbcType="VARCHAR" property="MOtherField1"/>
+        <result column="MOtherField2" jdbcType="VARCHAR" property="MOtherField2"/>
+        <result column="MOtherField3" jdbcType="VARCHAR" property="MOtherField3"/>
+        <result column="DepotName" jdbcType="VARCHAR" property="DepotName"/>
+        <result column="AnotherDepotName" jdbcType="VARCHAR" property="AnotherDepotName"/>
+        <result column="UnitId" jdbcType="BIGINT" property="UnitId"/>
+        <result column="UName" jdbcType="VARCHAR" property="UName"/>
     </resultMap>
 
-    <resultMap extends="com.wisewin.erp.datasource.mappers.DepotItemMapper.BaseResultMap" id="ResultByMaterial" type="com.wisewin.erp.datasource.entities.DepotItemVo4WithInfoEx">
-        <result column="MId" jdbcType="VARCHAR" property="MId" />
-        <result column="MName" jdbcType="VARCHAR" property="MName" />
-        <result column="MModel" jdbcType="VARCHAR" property="MModel" />
-        <result column="MaterialUnit" jdbcType="VARCHAR" property="MaterialUnit" />
-        <result column="UName" jdbcType="VARCHAR" property="UName" />
-        <result column="MColor" jdbcType="VARCHAR" property="MColor" />
-        <result column="PresetPriceOne" jdbcType="DECIMAL" property="presetPriceOne" />
-        <result column="PriceStrategy" jdbcType="VARCHAR" property="priceStrategy" />
+    <resultMap extends="com.wisewin.erp.datasource.mappers.DepotItemMapper.BaseResultMap" id="ResultByMaterial"
+               type="com.wisewin.erp.datasource.entities.DepotItemVo4WithInfoEx">
+        <result column="MId" jdbcType="VARCHAR" property="MId"/>
+        <result column="MName" jdbcType="VARCHAR" property="MName"/>
+        <result column="MModel" jdbcType="VARCHAR" property="MModel"/>
+        <result column="MaterialUnit" jdbcType="VARCHAR" property="MaterialUnit"/>
+        <result column="UName" jdbcType="VARCHAR" property="UName"/>
+        <result column="MColor" jdbcType="VARCHAR" property="MColor"/>
+        <result column="PresetPriceOne" jdbcType="DECIMAL" property="presetPriceOne"/>
+        <result column="PriceStrategy" jdbcType="VARCHAR" property="priceStrategy"/>
     </resultMap>
 
     <resultMap id="ResultStockWarningCount" type="com.wisewin.erp.datasource.vo.DepotItemStockWarningCount">
-        <result column="MaterialName" jdbcType="VARCHAR" property="MaterialName" />
-        <result column="MaterialModel" jdbcType="VARCHAR" property="MaterialModel" />
-        <result column="categoryName" jdbcType="VARCHAR" property="categoryName" />
-        <result column="MaterialOther" jdbcType="VARCHAR" property="MaterialOther" />
-        <result column="MaterialUnit" jdbcType="VARCHAR" property="MaterialUnit" />
-        <result column="safetystock" jdbcType="DECIMAL" property="safetystock" />
-        <result column="BasicInNumber" jdbcType="DECIMAL" property="BasicInNumber" />
-        <result column="BasicOutNumber" jdbcType="DECIMAL" property="BasicOutNumber" />
-        <result column="BasicNumber" jdbcType="DECIMAL" property="BasicNumber" />
-        <result column="BasicLinjieNumber" jdbcType="DECIMAL" property="BasicLinjieNumber" />
+        <result column="MaterialName" jdbcType="VARCHAR" property="MaterialName"/>
+        <result column="MaterialModel" jdbcType="VARCHAR" property="MaterialModel"/>
+        <result column="categoryName" jdbcType="VARCHAR" property="categoryName"/>
+        <result column="MaterialOther" jdbcType="VARCHAR" property="MaterialOther"/>
+        <result column="MaterialUnit" jdbcType="VARCHAR" property="MaterialUnit"/>
+        <result column="safetystock" jdbcType="DECIMAL" property="safetystock"/>
+        <result column="BasicInNumber" jdbcType="DECIMAL" property="BasicInNumber"/>
+        <result column="BasicOutNumber" jdbcType="DECIMAL" property="BasicOutNumber"/>
+        <result column="BasicNumber" jdbcType="DECIMAL" property="BasicNumber"/>
+        <result column="BasicLinjieNumber" jdbcType="DECIMAL" property="BasicLinjieNumber"/>
     </resultMap>
 
     <resultMap id="StockMap" type="com.wisewin.erp.datasource.vo.DepotItemVo4Stock">
-        <result column="in_stock" jdbcType="DECIMAL" property="inNum" />
-        <result column="out_stock" jdbcType="DECIMAL" property="outNum" />
+        <result column="in_stock" jdbcType="DECIMAL" property="inNum"/>
+        <result column="out_stock" jdbcType="DECIMAL" property="outNum"/>
     </resultMap>
 
-    <select id="selectByConditionDepotItem" parameterType="com.wisewin.erp.datasource.entities.DepotItemExample" resultMap="com.wisewin.erp.datasource.mappers.DepotItemMapper.BaseResultMap">
+    <select id="selectByConditionDepotItem" parameterType="com.wisewin.erp.datasource.entities.DepotItemExample"
+            resultMap="com.wisewin.erp.datasource.mappers.DepotItemMapper.BaseResultMap">
         select *
         FROM jsh_depotitem
         where 1=1
@@ -95,16 +100,17 @@
         and ifnull(delete_Flag,'0') !='1'
     </select>
 
-    <select id="findDetailByTypeAndMaterialIdList" parameterType="com.wisewin.erp.datasource.entities.DepotItemExample" resultMap="DetailByTypeAndMIdResultMap">
+    <select id="findDetailByTypeAndMaterialIdList" parameterType="com.wisewin.erp.datasource.entities.DepotItemExample"
+            resultMap="DetailByTypeAndMIdResultMap">
         select dh.Number,concat(dh.SubType,dh.Type) as newType,
         case
-            when type='入库' then ifnull(di.BasicNumber,0)
-            when type='出库' then 0-di.BasicNumber
-            when dh.SubType='组装单' and di.MType='组合件' then ifnull(di.BasicNumber,0)
-            when dh.SubType='组装单' and di.MType='普通子件' then 0-di.BasicNumber
-            when dh.SubType='拆卸单' and di.MType='普通子件' then ifnull(di.BasicNumber,0)
-            when dh.SubType='拆卸单' and di.MType='组合件' then 0-di.BasicNumber
-            else 0
+        when type='入库' then ifnull(di.BasicNumber,0)
+        when type='出库' then 0-di.BasicNumber
+        when dh.SubType='组装单' and di.MType='组合件' then ifnull(di.BasicNumber,0)
+        when dh.SubType='组装单' and di.MType='普通子件' then 0-di.BasicNumber
+        when dh.SubType='拆卸单' and di.MType='普通子件' then ifnull(di.BasicNumber,0)
+        when dh.SubType='拆卸单' and di.MType='组合件' then 0-di.BasicNumber
+        else 0
         end
         as b_num,
         date_format(dh.OperTime,'%Y-%m-%d %H:%i:%S') as oTime
@@ -131,7 +137,8 @@
         and ifnull(dh.delete_Flag,'0') !='1'
     </select>
 
-    <select id="getDetailList" parameterType="com.wisewin.erp.datasource.entities.DepotItemExample" resultMap="ResultWithInfoExMap">
+    <select id="getDetailList" parameterType="com.wisewin.erp.datasource.entities.DepotItemExample"
+            resultMap="ResultWithInfoExMap">
         select di.*,m.Name MName,m.Model MModel,m.Unit MaterialUnit,m.Color MColor,m.Standard MStandard,m.Mfrs MMfrs,
         m.OtherField1 MOtherField1,m.OtherField2 MOtherField2,m.OtherField3 MOtherField3,
         dp1.name DepotName,dp2.name AnotherDepotName, u.id UnitId, u.UName
@@ -145,11 +152,12 @@
         order by di.id asc
     </select>
 
-    <select id="findByAll" parameterType="com.wisewin.erp.datasource.entities.DepotItemExample" resultMap="ResultByMaterial">
+    <select id="findByAll" parameterType="com.wisewin.erp.datasource.entities.DepotItemExample"
+            resultMap="ResultByMaterial">
         select m.id MId, m.Name MName, m.Model MModel, m.Unit MaterialUnit, m.Color MColor,
         m.PresetPriceOne, m.PriceStrategy, u.UName UName
         from jsh_depotitem di
-        inner join jsh_material m on di.MaterialId=m.id  and ifnull(m.delete_Flag,'0') !='1'
+        inner join jsh_material m on di.MaterialId=m.id and ifnull(m.delete_Flag,'0') !='1'
         left join jsh_unit u on m.UnitId=u.id and ifnull(u.delete_Flag,'0') !='1'
         where 1=1
         <if test="headIds != null">
@@ -168,7 +176,7 @@
     <select id="findByAllCount" resultType="java.lang.Integer">
         select count(1) from (select m.id
         from jsh_depotitem di
-        inner join jsh_material m on di.MaterialId=m.id  and ifnull(m.delete_Flag,'0') !='1'
+        inner join jsh_material m on di.MaterialId=m.id and ifnull(m.delete_Flag,'0') !='1'
         where 1=1
         <if test="headIds != null">
             and di.HeaderId in (${headIds})
@@ -210,37 +218,106 @@
         and dh.OperTime &lt;= '${MonthTime}-31 23:59:59'
         and ifnull(dh.delete_Flag,'0') !='1'
     </select>
+    <!--
 
-    <select id="getStockByParam"  resultMap="StockMap">
-        select ifnull((curep.inTotal+curep.transfInTotal+curep.assemInTotal+curep.disAssemInTotal),0) as in_stock,
-        ifnull((curep.transfOutTotal+curep.outTotal+curep.assemOutTotal+curep.disAssemOutTotal),0) out_stock
-        from
-        (select sum(if(dh.type='入库' <if test="depotId != null">and di.DepotId=#{depotId}</if>, di.BasicNumber,0)) as inTotal,
-        sum(if(dh.SubType='调拨' <if test="depotId != null">and di.AnotherDepotId=#{depotId}</if>,di.BasicNumber,0)) as transfInTotal,
-        sum(if(dh.SubType='调拨' <if test="depotId != null">and di.DepotId=#{depotId}</if>,di.BasicNumber,0)) as transfOutTotal,
-        sum(if(dh.type='出库' and dh.SubType!='调拨' <if test="depotId != null">and di.DepotId=#{depotId}</if>,di.BasicNumber,0)) as outTotal,
-        sum(if(dh.SubType='组装单' and di.MType='组合件' <if test="depotId != null">and di.DepotId=#{depotId}</if>,di.BasicNumber,0)) as assemInTotal,
-        sum(if(dh.SubType='组装单' and di.MType='普通子件' <if test="depotId != null">and di.DepotId=#{depotId}</if>,di.BasicNumber,0)) as assemOutTotal,
-        sum(if(dh.SubType='拆卸单' and di.MType='普通子件' <if test="depotId != null">and di.DepotId=#{depotId}</if>,di.BasicNumber,0)) as disAssemInTotal,
-        sum(if(dh.SubType='拆卸单' and di.MType='组合件' <if test="depotId != null"> and di.DepotId=#{depotId}</if>,di.BasicNumber,0)) as disAssemOutTotal
-        from
+      select ifnull((curep.inTotal+curep.transfInTotal+curep.assemInTotal+curep.disAssemInTotal),0) as in_stock,
+            ifnull((curep.transfOutTotal+curep.outTotal+curep.assemOutTotal+curep.disAssemOutTotal),0) out_stock
+            from
+            (select sum(if(dh.type='入库' <if test="depotId != null">and di.DepotId=#{depotId}</if>, di.BasicNumber,0)) as inTotal,
+            sum(if(dh.SubType='调拨' <if test="depotId != null">and di.AnotherDepotId=#{depotId}</if>,di.BasicNumber,0)) as transfInTotal,
+            sum(if(dh.SubType='调拨' <if test="depotId != null">and di.DepotId=#{depotId}</if>,di.BasicNumber,0)) as transfOutTotal,
+            sum(if(dh.type='出库' and dh.SubType!='调拨' <if test="depotId != null">and di.DepotId=#{depotId}</if>,di.BasicNumber,0)) as outTotal,
+            sum(if(dh.SubType='组装单' and di.MType='组合件' <if test="depotId != null">and di.DepotId=#{depotId}</if>,di.BasicNumber,0)) as assemInTotal,
+            sum(if(dh.SubType='组装单' and di.MType='普通子件' <if test="depotId != null">and di.DepotId=#{depotId}</if>,di.BasicNumber,0)) as assemOutTotal,
+            sum(if(dh.SubType='拆卸单' and di.MType='普通子件' <if test="depotId != null">and di.DepotId=#{depotId}</if>,di.BasicNumber,0)) as disAssemInTotal,
+            sum(if(dh.SubType='拆卸单' and di.MType='组合件' <if test="depotId != null"> and di.DepotId=#{depotId}</if>,di.BasicNumber,0)) as disAssemOutTotal
+            from
+            jsh_depothead dh,jsh_depotitem di
+            where 1=1
+            and dh.id=di.HeaderId
+            and di.MaterialId=#{mId}
+            <if test="beginTime != null">
+                and dh.OperTime &gt;= '${beginTime}'
+            </if>
+            <if test="endTime != null">
+                and dh.OperTime &lt;= '${endTime}'
+            </if>
+            and dh.tenant_id=#{tenantId}
+            and di.tenant_id=#{tenantId}
+            and ifnull(dh.delete_Flag,'0') !='1'
+            and ifnull(di.delete_Flag,'0') !='1') as curep
+    -->
+    <select id="getStockByParam" resultMap="StockMap">
+        SELECT IFNULL(curep.inTotal+curep.transfInTotal+curep.assemInTotal+curep.disAssemInTotal,0) AS in_stock,
+        IFNULL(curep.transfOutTotal+curep.outTotal+curep.assemOutTotal+curep.disAssemOutTotal,0) out_stock
+        FROM
+        (SELECT SUM( IF(dh.type='入库', <if test="depotId != null">IF(di.DepotId=#{depotId} ,di.BasicNumber, 0)</if>
+        <if test="depotId == null">
+            di.BasicNumber
+        </if>,0)) AS
+        inTotal,
+        SUM( IF(dh.SubType='调拨', <if test="depotId != null">IF(di.AnotherDepotId=#{depotId} ,di.BasicNumber, 0)</if>
+        <if test="depotId == null">
+            di.BasicNumber
+        </if>,0)) AS
+        transfInTotal,
+        SUM( IF(dh.SubType='调拨'   , <if test="depotId != null">IF(di.DepotId=#{depotId} ,di.BasicNumber, 0)</if>
+        <if test="depotId == null">
+            di.BasicNumber
+        </if>,0)) AS
+        transfOutTotal,
+        SUM(IF(dh.SubType='组装单',IF(di.MType='调拨',
+        <if test="depotId != null">IF(di.DepotId=#{depotId} ,di.BasicNumber, 0)</if>
+        <if test="depotId == null">
+            di.BasicNumber
+        </if>
+        ,0),0)) AS outTotal,
+        SUM(IF(dh.SubType='组装单',IF(di.MType='组合件',
+        <if test="depotId != null">IF(di.DepotId=#{depotId} ,di.BasicNumber, 0)</if>
+        <if test="depotId == null">
+            di.BasicNumber
+        </if>
+        ,0),0)) AS
+        assemInTotal,
+        SUM(IF(dh.SubType='组装单',IF(di.MType='普通子件',
+        <if test="depotId != null">IF(di.DepotId=#{depotId} ,di.BasicNumber, 0)</if>
+        <if test="depotId == null">
+            di.BasicNumber
+        </if>
+        ,0),0)) AS
+        assemOutTotal,
+        SUM(IF(dh.SubType='拆卸单',IF(di.MType='普通子件',
+        <if test="depotId != null">IF(di.DepotId=#{depotId} ,di.BasicNumber, 0)</if>
+        <if test="depotId == null">
+            di.BasicNumber
+        </if>
+        ,0),0)) AS
+        disAssemInTotal,
+        SUM(IF(dh.SubType='拆卸单',IF(di.MType='组合件',
+        <if test="depotId != null">IF(di.DepotId=#{depotId} ,di.BasicNumber, 0)</if>
+        <if test="depotId == null">
+            di.BasicNumber
+        </if>
+        ,0),0)) AS disAssemOutTotal
+        FROM
         jsh_depothead dh,jsh_depotitem di
-        where 1=1
-        and dh.id=di.HeaderId
-        and di.MaterialId=#{mId}
+        WHERE 1=1
+        AND dh.id=di.HeaderId
+        AND di.MaterialId=#{mId}
         <if test="beginTime != null">
-            and dh.OperTime &gt;= '${beginTime}'
+            AND dh.OperTime &gt;= '${beginTime}'
         </if>
         <if test="endTime != null">
-            and dh.OperTime &lt;= '${endTime}'
+            AND dh.OperTime &lt;= '${endTime}'
         </if>
-        and dh.tenant_id=#{tenantId}
-        and di.tenant_id=#{tenantId}
-        and ifnull(dh.delete_Flag,'0') !='1'
-        and ifnull(di.delete_Flag,'0') !='1') as curep
+        AND dh.tenant_id=#{tenantId}
+        AND di.tenant_id=#{tenantId}
+        AND IFNULL(dh.delete_Flag,'0') !='1'
+        AND IFNULL(di.delete_Flag,'0') !='1') as curep
+
     </select>
 
-    <select id="findDepotItemListBydepotheadId"  resultType="com.wisewin.erp.datasource.entities.DepotItem">
+    <select id="findDepotItemListBydepotheadId" resultType="com.wisewin.erp.datasource.entities.DepotItem">
         select
         dep.id,dep.headerId,dep.materialid,dep.munit,dep.opernumber,
         dep.basicnumber,dep.unitprice,dep.taxunitprice,dep.allprice,dep.remark,
@@ -250,11 +327,11 @@
         from jsh_depotitem dep,jsh_material mat
         where 1=1
         <if test="depotheadId != null">
-           and dep.HeaderId = #{depotheadId}
+            and dep.HeaderId = #{depotheadId}
         </if>
-            and dep.materialid=mat.id
+        and dep.materialid=mat.id
         <if test="enableSerialNumber != null">
-           and mat.enableSerialNumber = #{enableSerialNumber}
+            and mat.enableSerialNumber = #{enableSerialNumber}
         </if>
         and ifnull(dep.delete_Flag,'0') !='1'
         and ifnull(mat.delete_Flag,'0') !='1'
@@ -294,9 +371,10 @@
         )
     </update>
 
-    <select id="getDepotItemListListByDepotIds" resultMap="com.wisewin.erp.datasource.mappers.DepotItemMapper.BaseResultMap">
+    <select id="getDepotItemListListByDepotIds"
+            resultMap="com.wisewin.erp.datasource.mappers.DepotItemMapper.BaseResultMap">
         select
-        <include refid="com.wisewin.erp.datasource.mappers.DepotItemMapper.Base_Column_List" />
+        <include refid="com.wisewin.erp.datasource.mappers.DepotItemMapper.Base_Column_List"/>
         from jsh_depotitem
         where 1=1
         and DepotId in (
@@ -307,9 +385,10 @@
         and ifnull(delete_Flag,'0') !='1'
     </select>
 
-    <select id="getDepotItemListListByMaterialIds" resultMap="com.wisewin.erp.datasource.mappers.DepotItemMapper.BaseResultMap">
+    <select id="getDepotItemListListByMaterialIds"
+            resultMap="com.wisewin.erp.datasource.mappers.DepotItemMapper.BaseResultMap">
         select
-        <include refid="com.wisewin.erp.datasource.mappers.DepotItemMapper.Base_Column_List" />
+        <include refid="com.wisewin.erp.datasource.mappers.DepotItemMapper.Base_Column_List"/>
         from jsh_depotitem
         where 1=1
         and materialId in (
@@ -320,7 +399,8 @@
         and ifnull(delete_Flag,'0') !='1'
     </select>
 
-    <select id="findStockWarningCount" parameterType="com.wisewin.erp.datasource.entities.DepotItemExample" resultMap="ResultStockWarningCount">
+    <select id="findStockWarningCount" parameterType="com.wisewin.erp.datasource.entities.DepotItemExample"
+            resultMap="ResultStockWarningCount">
         SELECT
         m. NAME MaterialName,
         m.Model MaterialModel,
@@ -340,7 +420,8 @@
         (
         IFNULL(intype.BasicInNumber ,0) - IFNULL(outtype.BasicOutNumber ,0)
         ) BasicNumber,
-        (IFNULL(intype.BasicInNumber ,0) - IFNULL(outtype.BasicOutNumber ,0) - ifnull(m.safetystock,0)) BasicLinjieNumber
+        (IFNULL(intype.BasicInNumber ,0) - IFNULL(outtype.BasicOutNumber ,0) - ifnull(m.safetystock,0))
+        BasicLinjieNumber
         FROM
         jsh_material m
         LEFT JOIN jsh_materialcategory mc ON mc.Id = m.CategoryId
