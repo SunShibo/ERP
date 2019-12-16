@@ -691,8 +691,10 @@ public class DepotItemController {
             List<BigDecimal> salePriceList = new ArrayList<BigDecimal>();
             for(String month: list) {
                 BigDecimal outPrice = depotItemService.inOrOutPrice("出库", "销售", month);
+                BigDecimal outPrice2 = depotItemService.inOrOutPrice("出库", "零售", month);
                 BigDecimal inPrice = depotItemService.inOrOutPrice("入库", "销售退货", month);
-                salePriceList.add(outPrice.subtract(inPrice));
+                BigDecimal inPrice2 = depotItemService.inOrOutPrice("入库", "零售退货", month);
+                salePriceList.add(outPrice.add(outPrice2).subtract(inPrice).subtract(inPrice2));
             }
             map.put("salePriceList", salePriceList);
             res.code = 200;

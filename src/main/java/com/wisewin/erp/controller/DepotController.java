@@ -135,6 +135,7 @@ public class DepotController {
                     } catch (DataAccessException e) {
                         logger.error(">>>>>>>>>>>>>>>>>查询用户对应的仓库：类型" + type + " KeyId为： " + keyId + " 存在异常！");
                     }
+                    //
                     if (!depotFlag || flag) {
                         item.put("id", depot.getId());
                         item.put("depotName", depot.getName());

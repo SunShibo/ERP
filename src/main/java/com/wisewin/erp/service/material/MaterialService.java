@@ -84,6 +84,7 @@ public class MaterialService {
 
     public List<MaterialVo4Unit> select(String name, String model, String categoryIds,String mpList, int offset, int rows)
             throws Exception{
+
         String[] mpArr = mpList.split(",");
         List<MaterialVo4Unit> resList = new ArrayList<MaterialVo4Unit>();
         List<MaterialVo4Unit> list =null;

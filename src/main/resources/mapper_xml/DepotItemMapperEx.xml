@@ -211,7 +211,7 @@
     </select>
 
     <select id="inOrOutPrice" resultType="java.math.BigDecimal">
-        select ifnull(sum(DiscountLastMoney),0) as allMoney from jsh_depothead dh
+        select ifnull(sum(TotalPrice),0) as allMoney from jsh_depothead dh
         where 1=1
         and dh.type='${type}' and dh.subType='${subType}'
         and dh.OperTime &gt;= '${MonthTime}-01 00:00:00'
@@ -266,7 +266,7 @@
             di.BasicNumber
         </if>,0)) AS
         transfOutTotal,
-        SUM(IF(dh.SubType='组装单',IF(di.MType='调拨',
+        SUM(IF(dh.type='出库',IF(dh.SubType!='调拨',
         <if test="depotId != null">IF(di.DepotId=#{depotId} ,di.BasicNumber, 0)</if>
         <if test="depotId == null">
             di.BasicNumber

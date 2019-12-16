@@ -254,7 +254,8 @@ public class DepotItemService {
     public BigDecimal buyOrSale(String type, String subType, Long MId, String MonthTime, String sumType) throws Exception{
         BigDecimal result= BigDecimal.ZERO;
         try{
-            if (SUM_TYPE.equals(sumType)) {
+
+            if ("number".equals(sumType)) {
                 result= depotItemMapperEx.buyOrSaleNumber(type, subType, MId, MonthTime, sumType);
             } else {
                 result= depotItemMapperEx.buyOrSalePrice(type, subType, MId, MonthTime, sumType);
@@ -281,7 +282,7 @@ public class DepotItemService {
         }catch(Exception e){
             JshException.readFail(logger, e);
         }
-        return result;
+        return result.abs();
     }
 
     /**
