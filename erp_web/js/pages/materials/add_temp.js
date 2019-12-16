@@ -136,7 +136,7 @@ function bindSupplierEvent() {
             return flag;
         }
 
-        //保存供应商信息
+        //保存供应商信息 零售出货 新增会员信息
         $("#saveSupplier").off("click").on("click",function() {
             if(validateForm("supplierFM")) {
                 return;

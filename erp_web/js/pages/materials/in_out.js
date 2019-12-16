@@ -535,6 +535,7 @@
 	//查找库存的方法
 	function findStockNumById(depotId, mId, monthTime, body, input, ratio, type){
 		var thisRatio = 1; //比例
+		debugger
 		$.ajax({
 			url: "/material/findById",
 			type: "get",
@@ -543,6 +544,7 @@
                 id: mId
 			},
 			success: function (rec) {
+                debugger
 				if(rec && rec.code === 200 && rec.data && rec.data[0]) {
 					var loadRatio = 1; //在单位输入框上面加载比例字段
 					if(rec.data[0].unit) { //如果存在计量单位信息
@@ -587,6 +589,7 @@
 						},
 						dataType: "json",
 						success: function (res) {
+                            debugger
                             if(res && res.code === 200) {
                                 if (res.data) {
                                     var thisStock = res.data.stock;
@@ -607,7 +610,9 @@
                                     body.find("[field='Stock']").find(input).val(0).attr("data-stock", 0); //加载库存数据
                                 }
                                 body.find("[field='Stock']").find(input).prop("readonly", "readonly"); //设置库存数据为只读
-                            }
+                            } else {
+                                $.messager.alert('查询提示','库存查询失败，请稍后再试！','error');
+							}
 						},
 						error:function() {
 							$.messager.alert('查询提示','查询数据后台异常，请稍后再试！','error');
@@ -891,6 +896,7 @@
                         id: mId
                     },
                     success: function (res) {
+                    	debugger
                         if(res && res.code === 200 && res.data && res.data[0]) {
                             var retailPrice = res.data[0].retailprice-0; //零售价格
                             var presetPriceOne = res.data[0].presetpriceone-0; //预计采购价
@@ -939,7 +945,7 @@
                                 var unitSetInput =""; //单位
                                 body.find("[field='Unit']").find(input).prop("readonly","readonly"); //设置计量单位为只读
                                 var loadRatio = 1; //在单位输入框上面加载比例字段
-                                if(listSubType === "采购" || listSubType === "采购退货" || listSubType === "采购订单"){
+                                if(listSubType === "采购" || listSubType === "采购订单"){
                                     unitSetInput = res.data[0].firstinunit; //给单位文本框赋值
                                     if(basicUnit==unitSetInput){ //基础单位等于选择的单位
                                         loadRatio = 1;
@@ -948,7 +954,7 @@
                                         loadRatio = ratio;
                                     }
                                 }
-                                else if(listSubType === "销售" || listSubType === "销售退货" || listSubType === "销售订单" || listSubType === "零售" || listSubType === "零售退货"){
+                                else if(listSubType === "销售" || listSubType === "采购退货" || listSubType === "销售退货" || listSubType === "销售订单" || listSubType === "零售" || listSubType === "零售退货"){
                                     unitSetInput = res.data[0].firstoutunit; //给单位文本框赋值
                                     if(basicUnit==unitSetInput){ //基础单位等于选择的单位
                                         loadRatio = 1;
@@ -1013,7 +1019,7 @@
                                                     UnitPrice = retailPriceTwo;
                                                     loadRatio = ratio;
                                                 }
-                                                body.find("[field='Stock']").find(input).val((stock/loadRatio).toFixed(2)); //修改库存
+                                                body.find("[field='Stock']").find(input).val((stock/loadRatio).toFixed(0)); //修改库存
                                             }
                                             body.find("[field='UnitPrice']").find(input).val(UnitPrice); //单价
                                             var OperNumber = body.find("[field='OperNumber']").find(input).val(); //获取数量
@@ -1823,6 +1829,7 @@
 				return;
 			}
 			else {
+				debugger
 				//如果初始编号被修改了，就要判断单据编号是否存在
 				if($.trim($("#Number").val()) != $('#Number').attr("data-defaultNumber")){
 					//调用查询单据编号是否重名的方法
@@ -1941,6 +1948,10 @@
 				var TotalPrice = $("#depotHeadFM .datagrid-footer [field='AllPrice'] div").text();
 				if($('#OrganId').length){
 					OrganId = $('#OrganId').combobox('getValue');
+					// if(!OrganId){
+                     //    $.messager.alert('提示','请选择会员卡号','warning');
+                     //    return;
+					// }
 				}
 				var accountMoneyList = $("#AccountId").attr("data-accountmoneyarr"); //账户金额列表-多账户
 				var accountMoneyArr;
@@ -2436,6 +2447,7 @@
             body.find("[field='Unit']").find(input).prop("readonly","readonly");
 			//修改数量，自动计算金额和合计，另外计算含税单价、税额、价税合计
 			body.find("[field='OperNumber']").find(input).off("keyup").on("keyup",function(){
+				debugger
 				var UnitPrice = body.find("[field='UnitPrice']").find(input).val(); //单价
 				var taxRate = body.find("[field='TaxRate']").find(input).val(); //税率
 				var OperNumber =$(this).val()-0; //数量
@@ -2447,6 +2459,7 @@
 			});
 	    	//修改单价，自动计算金额和合计
 	    	body.find("[field='UnitPrice']").find(input).off("keyup").on("keyup",function(){
+	    		debugger
 	    		var UnitPrice =$(this).val()-0; //单价
 				var taxRate = body.find("[field='TaxRate']").find(input).val(); //税率
 	    		var OperNumber = body.find("[field='OperNumber']").find(input).val(); //数量
@@ -2458,6 +2471,7 @@
 	    	});
 			//修改含税单价，自动计算单价、金额、税额、价税合计和合计
 			body.find("[field='TaxUnitPrice']").find(input).off("keyup").on("keyup",function(){
+				debugger
 				var TaxUnitPrice =$(this).val()-0; //含税单价
 				var taxRate = body.find("[field='TaxRate']").find(input).val(); //税率
 				var UnitPrice = TaxUnitPrice/(1+taxRate/100); //计算单价
@@ -2470,6 +2484,7 @@
 			});
 	    	//修改金额，自动计算单价、税额、价税合计和合计
 	    	body.find("[field='AllPrice']").find(input).off("keyup").on("keyup",function(){
+	    		debugger
 	    		var OperNumber = body.find("[field='OperNumber']").find(input).val(); //数量
 				var taxRate = body.find("[field='TaxRate']").find(input).val(); //税率
 	    		var AllPrice =$(this).val()-0; //金额
@@ -2654,6 +2669,7 @@
 	}
 	//新增单据主表及单据子表
 	function addDepotHeadAndDetail(url,infoStr){
+		debugger
 		var inserted = null;
 		if(pageType === "skip") {
             inserted = $("#materialData").datagrid('getChanges', "updated");
