@@ -1,7 +1,6 @@
 /*!
  * Copyright (c) 2013-Now 京睿天成 All rights reserved.
  *
- * @author jishenghua
  * @version 2019-09-14
  */
 (function (a) {

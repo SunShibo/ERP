@@ -3,9 +3,7 @@ package com.wisewin.erp.utils;
 import java.lang.annotation.Annotation;
 import java.lang.annotation.Documented;
 
-/**
- * @author jishenghua qq752718920  2018-10-7 15:26:27
- */
+
 public class AnnotationUtils {
     public static <A extends Annotation> A getAnnotation(Class<?> cls, Class<A> annotationClass) {
         A res = cls.getAnnotation(annotationClass);

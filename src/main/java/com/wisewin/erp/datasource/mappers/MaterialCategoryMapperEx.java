@@ -8,12 +8,7 @@ import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
-/**
- * Description
- *
- * @Author: cjl
- * @Date: 2019/2/18 17:23
- */
+
 public interface MaterialCategoryMapperEx {
     List<MaterialCategory> selectByConditionMaterialCategory(
             @Param("name") String name,

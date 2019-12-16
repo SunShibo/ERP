@@ -26,12 +26,7 @@ import javax.servlet.http.HttpServletRequest;
 import java.util.Date;
 import java.util.List;
 
-/**
- * Description
- *
- * @Author: cjl
- * @Date: 2019/3/6 15:10
- */
+
 @Service
 public class OrganizationService {
     private Logger logger = LoggerFactory.getLogger(OrganizationService.class);

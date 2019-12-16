@@ -3,7 +3,6 @@ package com.wisewin.erp.datasource.vo;
 import java.util.List;
 
 /**
- * Description
  *  树形结构基本元素
  */
 public class TreeNode {

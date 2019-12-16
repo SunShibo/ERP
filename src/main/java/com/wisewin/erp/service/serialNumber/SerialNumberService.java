@@ -23,12 +23,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-/**
- * Description
- *
- * @Author: cjl
- * @Date: 2019/1/21 16:33
- */
+
 @Service
 public class SerialNumberService {
     private Logger logger = LoggerFactory.getLogger(SerialNumberService.class);

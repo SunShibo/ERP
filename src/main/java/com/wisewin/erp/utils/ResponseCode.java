@@ -3,9 +3,6 @@ package com.wisewin.erp.utils;
 import com.alibaba.fastjson.annotation.JSONCreator;
 import com.alibaba.fastjson.annotation.JSONField;
 
-/**
- * @author jishenghua qq752718920  2018-10-7 15:26:27
- */
 public class ResponseCode {
 
     public final int code;

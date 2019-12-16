@@ -81,12 +81,8 @@ public class MaterialCategoryController {
         return res;
     }
     /**
-     * create by: cjl
-     * description:
      * 获取商品类别树数据
-     * create time: 2019/2/19 11:49
      * @Param:
-     * @return com.alibaba.fastjson.JSONArray
      */
     @RequestMapping(value = "/getMaterialCategoryTree")
     public JSONArray getMaterialCategoryTree(@RequestParam("id") Long id) throws Exception{
@@ -102,10 +98,7 @@ public class MaterialCategoryController {
         return arr;
     }
     /**
-     * create by: cjl
-     * description:
      *  新增商品类别数据
-     * create time: 2019/2/19 17:17
      * @Param: beanJson
      * @return java.lang.Object
      */
@@ -121,10 +114,7 @@ public class MaterialCategoryController {
         return result;
     }
     /**
-     * create by: cjl
-     * description:
      *  修改商品类别数据
-     * create time: 2019/2/20 9:30
      * @Param: beanJson
      * @return java.lang.Object
      */
@@ -140,10 +130,7 @@ public class MaterialCategoryController {
         return result;
     }
     /**
-     * create by: cjl
-     * description:
      *  批量删除商品类别信息
-     * create time: 2019/2/19 17:26
      * @Param: ids
      * @return java.lang.Object
      */

@@ -90,11 +90,8 @@ public class UserBusinessController {
         return res;
     }
     /**
-     * create by: qiankunpingtai
-     * website：https://qiankunpingtai.cn
      * description:
      *  批量删除用户角色模块关系信息
-     * create time: 2019/3/28 15:47
      * @Param: ids
      * @return java.lang.Object
      */

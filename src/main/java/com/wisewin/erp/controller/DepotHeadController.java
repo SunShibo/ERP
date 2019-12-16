@@ -375,10 +375,6 @@ public class DepotHeadController {
     }
 
     /**
-     * create by: cjl
-     * description:
-     *  新增单据主表及单据子表信息
-     * create time: 2019/1/25 14:36
      * @Param: beanJson
      * @Param: inserted
      * @Param: deleted
@@ -402,10 +398,7 @@ public class DepotHeadController {
         return result;
     }
     /**
-     * create by: cjl
-     * description:
      * 更新单据主表及单据子表信息
-     * create time: 2019/1/28 14:47
      * @Param: id
      * @Param: beanJson
      * @Param: inserted
@@ -428,10 +421,7 @@ public class DepotHeadController {
         return result;
     }
     /**
-     * create by: cjl
-     * description:
      *  删除单据主表及子表信息
-     * create time: 2019/1/28 17:29
      * @Param: id
      * @return java.lang.Object
      */
@@ -443,10 +433,7 @@ public class DepotHeadController {
         return result;
     }
     /**
-     * create by: cjl
-     * description:
      *  删除单据主表及子表信息
-     * create time: 2019/1/28 17:29
      * @Param: id
      * @return java.lang.Object
      */

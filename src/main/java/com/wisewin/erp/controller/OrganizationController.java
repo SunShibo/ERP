@@ -78,10 +78,7 @@ public class OrganizationController {
     }
 
     /**
-     * create by: cjl
-     * description:
      * 获取机构树数据
-     * create time: 2019/2/19 11:49
      * @Param:
      * @return com.alibaba.fastjson.JSONArray
      */
@@ -99,10 +96,7 @@ public class OrganizationController {
         return arr;
     }
     /**
-     * create by: cjl
-     * description:
      *  新增机构信息
-     * create time: 2019/2/19 17:17
      * @Param: beanJson
      * @return java.lang.Object
      */
@@ -118,10 +112,7 @@ public class OrganizationController {
         return result;
     }
     /**
-     * create by: cjl
-     * description:
      *  修改机构信息
-     * create time: 2019/2/20 9:30
      * @Param: beanJson
      * @return java.lang.Object
      */
@@ -137,10 +128,7 @@ public class OrganizationController {
         return result;
     }
     /**
-     * create by: cjl
-     * description:
      *  批量删除机构信息
-     * create time: 2019/2/19 17:26
      * @Param: ids
      * @return java.lang.Object
      */

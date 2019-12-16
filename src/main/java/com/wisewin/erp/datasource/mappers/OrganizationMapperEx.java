@@ -8,12 +8,6 @@ import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
-/**
- * Description
- *
- * @Author: cjl
- * @Date: 2019/3/6 15:51
- */
 public interface OrganizationMapperEx {
 
 

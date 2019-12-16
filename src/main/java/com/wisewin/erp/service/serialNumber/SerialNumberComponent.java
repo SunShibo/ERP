@@ -11,12 +11,7 @@ import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 import java.util.Map;
 
-/**
- * Description
- *
- * @Author: cjl
- * @Date: 2019/1/21 16:33
- */
+
 @Service(value = "serialNumber_component")
 @SerialNumberResource
 public class SerialNumberComponent implements ICommonQuery {

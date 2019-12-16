@@ -22,9 +22,6 @@ import java.util.Map;
 
 import static com.wisewin.erp.utils.ResponseJsonUtil.returnJson;
 
-/**
- * @author ji sheng hua 752*718*920
- */
 @RestController
 @RequestMapping(value = "/accountItem")
 public class AccountItemController {
@@ -33,8 +30,6 @@ public class AccountItemController {
     @Resource
     private AccountItemService accountItemService;
     /**
-     * create by: cjl
-     * description:
      *  业务逻辑操作放在service层，controller只做参数解析和视图封装
      * create time: 2019/1/11 15:08
      * @Param: inserted
@@ -103,9 +98,6 @@ public class AccountItemController {
         return res;
     }
     /**
-     * create by: qiankunpingtai
-     * website：https://qiankunpingtai.cn
-     * description:
      *  批量删除财务明细信息
      * create time: 2019/3/29 10:56
      * @Param: ids

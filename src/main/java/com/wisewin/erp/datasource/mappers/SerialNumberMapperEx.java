@@ -6,12 +6,6 @@ import org.apache.ibatis.annotations.Param;
 import java.util.Date;
 import java.util.List;
 
-/**
- * Description
- *
- * @Author: cjl
- * @Date: 2019/1/21 17:09
- */
 public interface SerialNumberMapperEx {
     /**
      * 根据条件查询序列号列表

@@ -9,12 +9,7 @@ import java.math.BigDecimal;
 import java.util.Date;
 import java.util.List;
 
-/**
- * Description
- *
- * @Author: cjl
- * @Date: 2019/1/24 16:59
- */
+
 public interface DepotItemMapperEx {
     List<DepotItem> selectByConditionDepotItem(
             @Param("name") String name,

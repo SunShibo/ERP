@@ -21,9 +21,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-/**
- * @author jishenghua 752*718*920
- */
+
 @RestController
 @RequestMapping(value = "/accountHead")
 public class AccountHeadController {
@@ -111,11 +109,7 @@ public class AccountHeadController {
     }
 
     /**
-     * create by: qiankunpingtai
-     * website：https://qiankunpingtai.cn
-     * description:
      *  批量删除账户信息
-     * create time: 2019/3/29 10:49
      * @Param: ids
      * @return java.lang.Object
      */

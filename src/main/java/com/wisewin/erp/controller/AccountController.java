@@ -23,9 +23,6 @@ import java.util.Map;
 
 import static com.wisewin.erp.utils.ResponseJsonUtil.returnJson;
 
-/**
- * @author jishenghua 75271*8920
- */
 @RestController
 @RequestMapping(value = "/account")
 public class AccountController {
@@ -142,11 +139,7 @@ public class AccountController {
         }
     }
     /**
-     * create by: qiankunpingtai
-     * website：https://qiankunpingtai.cn
-     * description:
      *  批量删除账户信息
-     * create time: 2019/3/29 10:49
      * @Param: ids
      * @return java.lang.Object
      */
@@ -156,10 +149,6 @@ public class AccountController {
 
         JSONObject result = ExceptionConstants.standardSuccess();
         /**
-         * create by: qiankunpingtai
-         * create time: 2019/4/10 10:19
-         * website：https://qiankunpingtai.cn
-         * description:
          *  出于兼容性考虑，没有传递删除类型时，默认为正常删除
          */
         int i=0;

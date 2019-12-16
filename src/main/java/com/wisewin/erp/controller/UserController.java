@@ -55,7 +55,7 @@ public class UserController {
     public BaseResponseInfo login(@RequestParam(value = "loginame", required = false) String loginame,
                         @RequestParam(value = "password", required = false) String password,
                         HttpServletRequest request)throws Exception {
-        logger.info("============用户登录 login 方法调用开始==============");
+        logger.info("******************用户登录************************");
         String msgTip = "";
         User user=null;
         BaseResponseInfo res = new BaseResponseInfo();
@@ -252,10 +252,7 @@ public class UserController {
         return res;
     }
     /**
-     * create by: cjl
-     * description:
      *  查询分页用户列表
-     * create time: 2019/3/8 15:08
      * @Param: pageSize
      * @Param: currentPage
      * @Param: search
@@ -297,10 +294,7 @@ public class UserController {
     }
 
     /**
-     * create by: cjl
-     * description:
      *  新增用户及机构和用户关系
-     * create time: 2019/3/8 16:06
      * @Param: beanJson
      * @return java.lang.Object
      */
@@ -342,10 +336,7 @@ public class UserController {
         return result;
     }
     /**
-     * create by: cjl
-     * description:
      *  修改用户及机构和用户关系
-     * create time: 2019/3/8 16:06
      * @Param: beanJson
      * @return java.lang.Object
      */

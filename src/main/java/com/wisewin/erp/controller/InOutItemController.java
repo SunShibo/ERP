@@ -18,9 +18,6 @@ import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
-/**
- * @author jishenghua  华夏ERP 2018年12月25日14:38:08
- */
 @RestController
 @RequestMapping(value = "/inOutItem")
 public class InOutItemController {
@@ -58,11 +55,8 @@ public class InOutItemController {
         return res;
     }
     /**
-     * create by: qiankunpingtai
-     * website：https://qiankunpingtai.cn
      * description:
      *  批量删除收支项目信息
-     * create time: 2019/3/29 11:15
      * @Param: ids
      * @return java.lang.Object
      */

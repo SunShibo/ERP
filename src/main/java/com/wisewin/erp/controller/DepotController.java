@@ -27,9 +27,6 @@ import java.util.*;
 
 import static com.wisewin.erp.utils.ResponseJsonUtil.returnJson;
 
-/**
- * @author ji sheng hua 752*718*920
- */
 @RestController
 @RequestMapping(value = "/depot")
 public class DepotController {
@@ -149,10 +146,7 @@ public class DepotController {
         return arr;
     }
     /**
-     * create by: cjl
-     * description:
      * 查询仓库列表信息
-     * create time: 2019/2/25 14:32
      * @Param: pageSize
      * @Param: currentPage
      * @Param: search
@@ -193,11 +187,8 @@ public class DepotController {
         return returnJson(objectMap, ErpInfo.OK.name, ErpInfo.OK.code);
     }
     /**
-     * create by: qiankunpingtai
-     * website：https://qiankunpingtai.cn
      * description:
      *  批量删除仓库信息
-     * create time: 2019/3/29 11:15
      * @Param: ids
      * @return java.lang.Object
      */

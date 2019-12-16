@@ -11,12 +11,7 @@ import java.math.BigDecimal;
 import java.util.Date;
 import java.util.List;
 
-/**
- * Description
- *
- * @Author: cjl
- * @Date: 2019/1/25 14:50
- */
+
 public interface DepotHeadMapperEx {
     List<DepotHeadVo4List> selectByConditionDepotHead(
             @Param("type") String type,

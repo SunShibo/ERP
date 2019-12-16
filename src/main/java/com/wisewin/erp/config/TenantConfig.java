@@ -81,8 +81,8 @@ public class TenantConfig {
             public boolean doFilter(MetaObject metaObject) {
                 MappedStatement ms = SqlParserHelper.getMappedStatement(metaObject);
                 // 过滤自定义查询此时无租户信息约束出现
-                if ("com.jsh.erp.datasource.mappers.UserMapperEx.getUserListByUserNameOrLoginName".equals(ms.getId())||
-                        "com.jsh.erp.datasource.mappers.DepotItemMapperEx.getStockByParam".equals(ms.getId())) {
+                if ("com.wisewin.erp.datasource.mappers.UserMapperEx.getUserListByUserNameOrLoginName".equals(ms.getId())||
+                        "com.wisewin.erp.datasource.mappers.DepotItemMapperEx.getStockByParam".equals(ms.getId())) {
                     return true;
                 }
                 return false;
@@ -93,13 +93,13 @@ public class TenantConfig {
 
     /**
      * 相当于顶部的：
-     * {@code @MapperScan("com.jsh.erp.datasource.mappers*")}
+     * {@code @MapperScan("com.wisewin.erp.datasource.mappers*")}
      * 这里可以扩展，比如使用配置文件来配置扫描Mapper的路径
      */
     @Bean
     public MapperScannerConfigurer mapperScannerConfigurer() {
         MapperScannerConfigurer scannerConfigurer = new MapperScannerConfigurer();
-        scannerConfigurer.setBasePackage("com.jsh.erp.datasource.mappers*");
+        scannerConfigurer.setBasePackage("com.wisewin.erp.datasource.mappers*");
         return scannerConfigurer;
     }
 

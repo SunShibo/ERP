@@ -22,10 +22,7 @@ public class SerialNumberController {
     @Resource
     private SerialNumberService serialNumberService;
     /**
-     * create by: cjl
-     * description:
      *  检查序列号是否存在
-     * create time: 2019/1/22 11:02
      * @Param: id
      * @Param: materialName
      * @Param: serialNumber
@@ -45,10 +42,7 @@ public class SerialNumberController {
         return result;
     }
     /**
-     * create by: cjl
-     * description:
      *  新增序列号信息
-     * create time: 2019/1/22 17:10
      * @Param: beanJson
      * @Param: request
      * @return java.lang.Object
@@ -63,10 +57,7 @@ public class SerialNumberController {
 
     }
     /**
-     * create by: cjl
-     * description:
      *  修改序列号信息
-     * create time: 2019/1/23 13:56
      * @Param: beanJson
      * @return java.lang.Object
      */
@@ -81,10 +72,7 @@ public class SerialNumberController {
 
     }
     /**
-     * create by: cjl
-     * description:
      *批量添加序列号
-     * create time: 2019/1/29 15:11
      * @Param: materialName
      * @Param: serialNumberPrefix
      * @Param: batAddTotal
@@ -102,11 +90,8 @@ public class SerialNumberController {
 
     }
     /**
-     * create by: qiankunpingtai
-     * website：https://qiankunpingtai.cn
      * description:
      *  逻辑删除序列号信息
-     * create time: 2019/3/27 17:43
      * @Param: ids
      * @return java.lang.Object
      */

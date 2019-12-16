@@ -125,11 +125,8 @@ public class PersonController {
         return dataArray;
     }
     /**
-     * create by: qiankunpingtai
-     * website：https://qiankunpingtai.cn
      * description:
      *  批量删除经手人信息
-     * create time: 2019/3/29 11:15
      * @Param: ids
      * @return java.lang.Object
      */

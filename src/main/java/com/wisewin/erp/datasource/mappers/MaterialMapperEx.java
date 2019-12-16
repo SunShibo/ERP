@@ -8,12 +8,6 @@ import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
-/**
- * Description
- *
- * @Author: cjl
- * @Date: 2019/1/22 14:54
- */
 public interface MaterialMapperEx {
 
     List<MaterialVo4Unit> selectByConditionMaterial(

@@ -19,9 +19,6 @@ import javax.servlet.http.HttpServletRequest;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * @author ji-sheng-hua  华夏ERP
- */
 @RestController
 @RequestMapping(value = "/functions")
 public class FunctionsController {
@@ -305,11 +302,8 @@ public class FunctionsController {
         return res;
     }
     /**
-     * create by: qiankunpingtai
-     * website：https://qiankunpingtai.cn
      * description:
      *  批量删除功能模块信息
-     * create time: 2019/3/29 11:15
      * @Param: ids
      * @return java.lang.Object
      */

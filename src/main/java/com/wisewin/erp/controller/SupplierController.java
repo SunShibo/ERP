@@ -187,9 +187,7 @@ public class SupplierController {
                     item.put("AdvanceIn", supplier.getAdvancein());
                     item.put("BeginNeedGet", supplier.getBeginneedget());
                     item.put("BeginNeedPay", supplier.getBeginneedpay());
-                    /**
-                     * 2018-01-28这里会有空指针异常
-                     * */
+
                     if(supplier.getIsystem()!=null){
                         item.put("isystem", supplier.getIsystem() == (short) 0 ? "是" : "否");
                     }

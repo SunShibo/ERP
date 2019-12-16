@@ -242,7 +242,6 @@ public class DepotItemController {
      * 查找所有的明细
      * @param currentPage
      * @param pageSize
-     * @param projectId
      * @param monthTime
      * @param headIds
      * @param materialIds
@@ -308,7 +307,6 @@ public class DepotItemController {
      * 导出excel表格
      * @param currentPage
      * @param pageSize
-     * @param projectId
      * @param monthTime
      * @param headIds
      * @param materialIds
@@ -359,7 +357,6 @@ public class DepotItemController {
 
     /**
      * 统计总计金额
-     * @param pid
      * @param monthTime
      * @param headIds
      * @param materialIds
@@ -566,11 +563,8 @@ public class DepotItemController {
     }
 
     /**
-     * create by: qiankunpingtai
-     * website：https://qiankunpingtai.cn
      * description:
      *  批量删除单据明细信息
-     * create time: 2019/3/29 11:15
      * @Param: ids
      * @return java.lang.Object
      */
@@ -617,7 +611,6 @@ public class DepotItemController {
      * @param currentPage
      * @param pageSize
      * @param projectId
-     * @param monthTime
      * @param request
      * @param response
      * @return

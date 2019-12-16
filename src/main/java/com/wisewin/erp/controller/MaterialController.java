@@ -308,11 +308,7 @@ public class MaterialController {
         return returnJson(objectMap, ErpInfo.OK.name, ErpInfo.OK.code);
     }
     /**
-     * create by: qiankunpingtai
-     * website：https://qiankunpingtai.cn
-     * description:
      *  批量删除商品信息
-     * create time: 2019/3/29 11:15
      * @Param: ids
      * @return java.lang.Object
      */
